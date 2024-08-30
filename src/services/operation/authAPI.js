@@ -7,7 +7,7 @@ export function login (data,navigate){
         const toastId = toast.loading("Loading...")
         dispatch(setLoading(true))
         try{
-            const response = await apiConnector("POST","https://localhost:4000/api/v1/login",data)
+            const response = await apiConnector("POST","http://localhost:4000/api/v1/login",data)
             if(!response.data.success){
                 throw new Error(toast.error(response.data.message))
             }
