@@ -19,7 +19,7 @@ router.delete("/deleteAccount",auth,isSuperAdmin,deleteUser);
 
 router.post("/sendReports",auth,isManager,createReport)
 router.get("/getAllReports",auth,isSuperAdmin,getAllReport);
-router.delete("/deleteReport",auth,isSuperAdmin,deleteReport)
+router.delete("/deleteReport",auth,isSuperAdmin, deleteReport)
 
 
 module.exports = router
